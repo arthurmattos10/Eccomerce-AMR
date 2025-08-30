@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary-color: #FF4111;
+    --primary-color: #9400de;
     --secondary-color: #2C3E50;
     --accent-color: #3498DB;
     --text-color: #2C3E50;
@@ -100,4 +100,21 @@ header {
 
 .category-btn.active {
     background-color: var(--primary-color);
+}
+
+.blackfriday-section {
+    background: #6A0DAD;
+    background: linear-gradient(160deg, #6A0DAD 0%, rgb(30, 2, 74) 55%);
+    color: var(--white-color);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.blackfriday-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.blackfriday-section p {
+    font-size: 1.2rem;
 }
