@@ -118,3 +118,10 @@ header {
 .blackfriday-section p {
     font-size: 1.2rem;
 }
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 2rem;
+}
