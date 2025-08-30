@@ -82,3 +82,7 @@ let produtos = [
         descricao: "Notebook Windows premium"
     }
 ];
+
+let containerProdutos = document.querySelector(".products-container")
+let input = document.querySelector(".search-input")
+let todosBotoes = document.querySelectorAll(".category-btn")
