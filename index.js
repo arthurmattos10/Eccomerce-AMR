@@ -86,3 +86,34 @@ let produtos = [
 let containerProdutos = document.querySelector(".products-container")
 let input = document.querySelector(".search-input")
 let todosBotoes = document.querySelectorAll(".category-btn")
+
+function mostrarProdutos() {
+    let htmlProdutos = ""
+
+    let produtosFiltrados = produtos.filter(prd => {
+
+        let passouCategoria = (categoriaAtual === "all" || prd.categoria === categoriaAtual)
+
+        let passouPesquisa = prd.nome.toLowerCase().includes(textoPesquisa.toLowerCase())
+
+        return passouPesquisa && passouCategoria
+    })
+
+
+    produtosFiltrados.forEach(prd => {
+
+        htmlProdutos = htmlProdutos + `   
+           <div class="product-card">
+                <img class="product-img" src="${prd.imagem}" alt="${prd.nome}">
+                <div class="product-info">
+                    <h3 class="product-name">${prd.nome}</h3>
+                    <p class="product-description">${prd.descricao}</p>
+                    <p class="product-price">R$ ${prd.preco}</p>
+                    <button class="product-button">Ver Datalhes</button>
+                </div>
+            </div>
+        `
+    })
+
+    containerProdutos.innerHTML = htmlProdutos
+}
