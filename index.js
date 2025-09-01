@@ -123,3 +123,17 @@ function pesquisar() {
 
     mostrarProdutos()
 }
+
+function trocarCategoria(categoria) {
+    categoriaAtual = categoria
+
+    todosBotoes.forEach(botao => {
+        botao.classList.remove("active")
+
+        if (botao.getAttribute("data-category") === categoria) {
+            botao.classList.add("active")
+        }
+    })
+
+    mostrarProdutos()
+}
