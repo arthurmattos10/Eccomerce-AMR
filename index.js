@@ -117,3 +117,9 @@ function mostrarProdutos() {
 
     containerProdutos.innerHTML = htmlProdutos
 }
+
+function pesquisar() {
+    textoPesquisa = input.value
+
+    mostrarProdutos()
+}
