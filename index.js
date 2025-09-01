@@ -137,3 +137,25 @@ function trocarCategoria(categoria) {
 
     mostrarProdutos()
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+
+    // Mostrar todos os produtos
+    mostrarProdutos()
+
+    // Ouvinte de Eventos no Input
+    input.addEventListener('input', pesquisar)
+
+    // Ouvinte de Eventos em TODOS os Botões
+    todosBotoes.forEach(botao => {
+
+        botao.addEventListener('click', () => {
+            let categoria = botao.getAttribute("data-category")
+
+            trocarCategoria(categoria)
+
+        })
+
+    })
+
+})
